@@ -1,14 +1,6 @@
 import { connect } from 'react-redux';
 import PreviewComponent from './PreviewComponent';
 
-const mapStateToProps = state => {
-
-};
-
-const mapDispatchToProps = dispatch => {
-
-};
-
-const PreviewContainer = connect(mapStateToProps, mapDispatchToProps)(PreviewComponent);
+const PreviewContainer = connect()(PreviewComponent);
 
 export default PreviewContainer;

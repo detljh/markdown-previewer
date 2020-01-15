@@ -11,12 +11,11 @@ class EditorComponent extends React.Component {
             <div className="row">
                 <div className="col-sm-5">
                     <div id="editor-box">
-                        <textarea id="editor">
-
+                        <textarea id="editor" value={this.props.input} onChange={this.props.handleChange}>
                         </textarea>
                     </div>
                 </div>
-                <PreviewContainer />
+                <PreviewContainer input={this.props.input} />
             </div>
         );
     }

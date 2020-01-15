@@ -9,7 +9,7 @@ class PreviewComponent extends React.Component {
         return (
             <div className="col-sm-7">
                 <div id="preview">
-
+                <p>{this.props.input}</p>
                 </div>
             </div>
         )
