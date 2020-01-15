@@ -8,9 +8,7 @@ class PreviewComponent extends React.Component {
     render() {
         return (
             <div className="col-sm-7">
-                <div id="preview">
-                <p>{this.props.input}</p>
-                </div>
+                <div id="preview" dangerouslySetInnerHTML={{__html: this.props.input}} />
             </div>
         )
     }

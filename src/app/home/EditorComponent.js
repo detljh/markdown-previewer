@@ -1,5 +1,6 @@
 import React from 'react';
 import PreviewContainer from './PreviewContainer';
+import ColumnResizer from "react-column-resizer";
 
 class EditorComponent extends React.Component {
     constructor(props) {
@@ -15,7 +16,7 @@ class EditorComponent extends React.Component {
                         </textarea>
                     </div>
                 </div>
-                <PreviewContainer input={this.props.input} />
+                <PreviewContainer input={this.props.markedInput} />
             </div>
         );
     }

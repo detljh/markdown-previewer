@@ -1,9 +1,10 @@
 import types from './types.js';
 
-const handleChange = (input) => {
+const handleChange = (input, markedInput) => {
     return {
         type: types.INPUT,
-        input: input
+        input: input,
+        markedInput: markedInput
     }
 }
 

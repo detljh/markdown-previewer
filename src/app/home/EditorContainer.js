@@ -4,7 +4,8 @@ import { homeOperations } from './duck';
 
 const mapStateToProps = state => {
     return {
-        input: state.home.input
+        input: state.home.input,
+        markedInput: state.home.markedInput
     }
 };
 
