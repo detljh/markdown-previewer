@@ -21,11 +21,10 @@ Use backticks to input in-line code \`<div></div>\`
 
 > Blockquotes are also available
 
-Put **emphasis** on your texts by making them bold
+Put **emphasis** on your texts by making them **bold**
 
 Or insert an _image_
-
-![image](https://goo.gl/Umyytc)`;
+![react-logo](https://goo.gl/Umyytc)`;
 
 const markedInput = marked(input, {sanitize:true});
 const INITIAL_STATE = {

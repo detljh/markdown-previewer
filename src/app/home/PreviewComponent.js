@@ -1,10 +1,12 @@
 import React from 'react';
+import './preview.scss'
 
 const PreviewComponent = (props) => {
     return (
-        <div className="col-sm-7">
+        <div id="preview-box">
             <div id="preview" dangerouslySetInnerHTML={{__html: props.input}} />
         </div>
+        
     );
 }
 

@@ -1,17 +1,19 @@
 import React from 'react';
 import PreviewContainer from './PreviewContainer';
-import ColumnResizer from "react-column-resizer";
+import './editor.scss';
+import ToolBar from './ToolBarComponent';
 
 const EditorComponent = (props) => {
     return (
-        <div className="row">
-            <div className="col-sm-5">
+        <div>
+            <div>
                 <div id="editor-box">
-                    <textarea id="editor" value={props.input} onChange={props.handleChange}>
-                    </textarea>
+                    <ToolBar />
+                    <textarea id="editor" value={props.input} onChange={props.handleChange} />
                 </div>
-            </div>
+            
             <PreviewContainer input={props.markedInput} />
+            </div>
         </div>
     );
 }

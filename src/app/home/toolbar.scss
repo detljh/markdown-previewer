@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+.toolbar {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    height: 20px;
+    font-size: 14px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    background-color: white;
+    width: 100%;
+    justify-content: space-between;
+
+    #markdown-logo {
+        padding: 1px;
+        margin: 2px;
+    }
+
+    #minimize {
+        padding: 1px;
+        margin-right: 5px;
+        margin-left: auto;
+        cursor: pointer;
+    }
+}
