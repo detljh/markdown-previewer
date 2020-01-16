@@ -1,5 +1,7 @@
 const INPUT = 'INPUT';
+const MINIMIZE= 'MINIMIZE';
 
 export default {
-    INPUT
+    INPUT,
+    MINIMIZE
 };

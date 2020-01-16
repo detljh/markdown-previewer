@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMarkdown } from '@fortawesome/free-brands-svg-icons';
-import { faWindowMinimize } from '@fortawesome/free-solid-svg-icons';
+import { faWindowMinimize, faWindowMaximize } from '@fortawesome/free-solid-svg-icons';
 import './toolbar.scss';
 
 const ToolBarComponent = (props) => {

@@ -5,9 +5,17 @@ const handleChange = (input, markedInput) => {
         type: types.INPUT,
         input: input,
         markedInput: markedInput
-    }
+    };
+}
+
+const handleMinimize = (isMinimized) => {
+    return {
+        type: types.MINIMIZE,
+        isMinimized: isMinimized
+    };
 }
 
 export default { 
-    handleChange
+    handleChange,
+    handleMinimize
 };

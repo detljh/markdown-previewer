@@ -1,12 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+$light-gray: hsl(0, 0%, 95%);
+$dark-gray: hsl(0, 0%, 30%);
+
+* {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
 #preview-box {
     margin: 20px;
-    border: 1px solid black;
-    padding: 10px;
+    box-shadow: 0 0 15px 1px green;
+    padding: 20px;
+    z-index: 1;
 
     #preview {
         height: 100%;
         width: 100%;
-        z-index: 1;
+        font-size: 14px;
+        font-family: 'Open Sans';
+        padding: 10px;
+        
+        h1 {
+            border-bottom: 1px solid $light-gray;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        pre, code {
+            background-color: $light-gray;
+            color: black;
+            font-size: 14px;
+        }
+
+        pre {
+            margin: 10px;
+            max-width: 95%;
+            padding: 5px;
+        }
+
+        blockquote {
+            font-size: 16px;
+            text-align: left;
+            border-left: 3px solid green;
+            padding: 0 8px;
+            color: $dark-gray;
+            margin-left: 30px;
+        }
+
+        table {
+            border: 1px solid gray;
+            max-width: 95%;
+            margin: 10px;
+            word-break: break-all;
+            
+            thead {
+                background-color: $light-gray;
+
+                th, tr {
+                    padding: 5px 10px;
+                    border-bottom: 1px solid gray;
+                    border-right: 1px dashed gray;
+                    text-align: center;
+                }
+            }
+            
+
+            tbody {
+                font-size: 12px;
+
+                td, th {
+                    padding: 5px 10px;
+                    border-bottom: 1px dotted gray;
+                    border-right: 1px dashed gray;
+                }
+            }
+            
+        }
+
+        a {
+            color: green;
+        }
+
+        a:hover {
+            opacity: 0.5;
+            text-decoration: none;
+        }
+
+        p {
+            margin-bottom: 5px;
+        }
     }
 }
 
