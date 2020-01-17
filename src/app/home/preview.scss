@@ -10,9 +10,10 @@ $dark-gray: hsl(0, 0%, 30%);
 
 #preview-box {
     margin: 20px;
-    box-shadow: 0 0 15px 1px green;
+    box-shadow: 0 0 15px 1px gray;
     padding: 20px;
     z-index: 1;
+    border-radius: 10px;
 
     #preview {
         height: 100%;
@@ -22,7 +23,7 @@ $dark-gray: hsl(0, 0%, 30%);
         padding: 10px;
         
         h1 {
-            border-bottom: 1px solid $light-gray;
+            border-bottom: 3px solid $light-gray;
         }
 
         h2 {

@@ -35,12 +35,15 @@ Another row | last cell! |
 Numbered lists:
 1. number 1
 2. number 2
+
+---
 `;
 
-const markedInput = marked(input, {sanitize:true});
+const markedInput = marked(input);
 const INITIAL_STATE = {
     input: input,
-    markedInput: markedInput
+    markedInput: markedInput,
+    isMinimized: false
 };
 
 const homeReducer = (state=INITIAL_STATE, action) => {
@@ -49,6 +52,10 @@ const homeReducer = (state=INITIAL_STATE, action) => {
             return Object.assign({}, state, {
                 input: action.input,
                 markedInput: action.markedInput
+            });
+        case types.MINIMIZE:
+            return Object.assign({}, state, {
+                isMinimized: !state.isMinimized
             });
         default:       
             return state;

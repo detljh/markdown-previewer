@@ -1,56 +1,64 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata&display=swap');
 @import url('/font-awesome-4.6.3/css/font-awesome.min.css');
 
-#editor {
-    width: 100%;
-    height: 200px;
-    min-height: 20px;
-    box-sizing: border-box;
-    padding: 0 10px;
-    position: relative;
-    color: green;
-    background-color: black;
-    z-index: 100;
-    resize: vertical;
-    outline: none;
-    border: 1px solid black;
-    border: none;
-    overflow-y: scroll;
-    font-family: 'Inconsolata', monospace;
-    font-size: 13px; 
-}
-
-@media (min-width: 700px) {
-    #editor-box {
-        position: fixed;
-        width: 300px;
-        margin: 10px auto;
-        right: 5px;
+.editor-maximized {
+    #editor {
+        width: 100%;
+        height: 200px;
+        min-height: 20px;
+        box-sizing: border-box;
+        padding: 0 5px;
+        position: relative;
+        color: green;
+        background-color: black;
+        z-index: 100;
+        resize: vertical;
+        outline: none;
+        border: 1px solid black;
+        border: none;
+        overflow-y: scroll;
+        font-family: 'Inconsolata', monospace;
+        font-size: 13px; 
+    }
     
-        #editor {
-            opacity: 0.8;
+    @media (min-width: 700px) {
+        #editor-box {
+            position: fixed;
+            width: 300px;
+            margin: 10px auto;
+            right: 5px;
+        
+            #editor {
+                opacity: 0.8;
+            }
+        
+            #editor:hover {
+                opacity: 1;
+            }
         }
+    }
     
-        #editor:hover {
-            opacity: 1;
+    @media (min-width: 900px) {
+        #editor-box {
+            width: 500px;
+        }
+    }
+    
+    @media (max-width: 700px) {
+        #editor-box {
+            width: 70vw;
+            margin: 10px auto;
+    
+            #editor {
+                opacity: 1;
+            }
         }
     }
 }
 
-@media (min-width: 900px) {
-    #editor-box {
-        width: 500px;
-    }
-}
-
-@media (max-width: 700px) {
-    #editor-box {
-        width: 70vw;
-        margin: 10px auto;
-
-        #editor {
-            opacity: 1;
-        }
+.editor-minimized {
+    #editor {
+        display: none;
     }
 }
 

@@ -5,11 +5,13 @@ import { faWindowMinimize, faWindowMaximize } from '@fortawesome/free-solid-svg-
 import './toolbar.scss';
 
 const ToolBarComponent = (props) => {
+    const icon = props.icon == 'min' ? faWindowMinimize : faWindowMaximize;
+
     return (
-        <div className="toolbar">
+        <div className='toolbar' id={props.idType}>
             <FontAwesomeIcon icon={faMarkdown} id="markdown-logo" />
-            Editor
-            <FontAwesomeIcon icon={faWindowMinimize} id="minimize" onClick={props.handleMinimize} />
+            <p id="toolbar-text">{props.text}</p>
+            <FontAwesomeIcon icon={icon} id="minimize" onClick={props.handleMinimize} />
         </div>
     );
 }

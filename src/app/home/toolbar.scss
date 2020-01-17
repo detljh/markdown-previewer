@@ -1,31 +1,83 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import './preview.scss';
 
 .toolbar {
     position: relative;
     display: flex;
     flex-direction: row;
-    border: 1px solid black;
+    border: 1px solid $dark-gray;
     height: 20px;
     font-size: 14px;
     font-family: 'Lato', sans-serif;
     font-weight: bold;
     background-color: white;
-    width: 100%;
     justify-content: space-between;
+    border-bottom: none;
 
     #markdown-logo {
         padding: 1px;
         margin: 2px;
     }
-
+    
     #minimize {
         padding: 1px;
-        margin-right: 5px;
+        margin-right: 10px;
         margin-left: auto;
         cursor: pointer;
     }
-
+    
     #minimize:hover {
         opacity: 0.5;
+    }
+}
+
+#toolbar-maximized {
+    width: 100%;
+}
+
+#toolbar-minimized {
+    position: fixed;
+
+    #markdown-logo {
+        display: none;
+    }
+
+    @media (min-width: 700px) {
+        padding-left: 5px;
+        font-size: 12px;
+        width: 10%;
+        bottom: 0;
+        right: 5px;
+        
+        
+
+        #minimize {
+            margin-top: 2px;
+        }
+    }
+
+    @media (min-width: 900px) {
+        font-size: 14px;
+        
+        #markdown-logo {
+            display: block;
+        }
+    }
+
+    @media (max-width: 700px) {
+        width: 20px;
+        left: 5px;
+        top: 5px;
+        border-radius: 50%;
+        border: 1px solid $dark-gray;
+
+        #toolbar-text {
+            display: none;
+        }
+
+        #minimize {
+            margin: auto;
+            
+        }
     }
 }

@@ -5,7 +5,8 @@ import { homeOperations } from './duck';
 const mapStateToProps = state => {
     return {
         input: state.home.input,
-        markedInput: state.home.markedInput
+        markedInput: state.home.markedInput,
+        isMinimized: state.home.isMinimized
     }
 };
 
@@ -13,6 +14,9 @@ const mapDispatchToProps = dispatch => {
     return {
         handleChange: (event) => {
             dispatch(homeOperations.handleChange(event.target.value));
+        },
+        handleMinimize: () => {
+            dispatch(homeOperations.handleMinimize());
         }
     }
 };
